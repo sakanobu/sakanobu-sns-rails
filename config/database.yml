@@ -83,3 +83,6 @@ production:
   database: sakamo_sns_rails_production
   username: sakamo_sns_rails
   password: <%= ENV['SAKAMO_SNS_RAILS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
