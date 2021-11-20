@@ -1,0 +1,43 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'db/**/*'
+    - 'lib/**'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+
+Rails:
+  Enabled: true
+
+# 日本語コメントを許可します。
+Style/AsciiComments:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# ネストしなくてもモジュールの名前空間を分けられるように
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
